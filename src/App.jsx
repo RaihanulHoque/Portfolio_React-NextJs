@@ -1,11 +1,11 @@
 // import './App.css';
 import './css/style.css';
-import './css/bootstrap.css';
+// import './css/bootstrap.css';
 // import './css/responsive.css';
 import Preloader from  './Components/Preloader';
 import Header from  './Components/Header';
 import { useEffect, useState } from 'react';
-import Album from './Components/Album';
+import Main from './Components/Main';
  
 function App() {
     const [showLoader, setShowLoader] = useState(true)
@@ -36,8 +36,8 @@ function App() {
       :
       (
         <>
-          <Header />
-          <Album />
+          {/* <Header /> */}
+          <Main />
 
         </>
       )
