@@ -21,6 +21,7 @@ import ProfileImage from '../images/img1.jpg'
 import { borderBottom } from "@mui/system";
 import { StepLabel, Stepper } from "@material-ui/core";
 import About from "./About";
+import LeftPanel from "./LeftPanel";
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: 'transparent',
@@ -137,9 +138,63 @@ const Home = () => {
     return (
     <Grid container style={styles.wraperContainer} sx={{ flexGrow: 1 }} justifyContent="center" >
       <Grid container spacing={2} xs={12} sm={6} md={12} lg={10} justifyContent="center">
+        <Grid item xs={3} md={4} justifyContent="center" textAlign="center" style={styles.main}>
+        <Item justifyContent="center">
+                <Avatar
+                    alt="Raihan Sabuj"
+                    src={ProfileImage}
+                    sx={{ width: 140, height: 140 }}
+                />
+                <Typography sx={{ mt:5 }} color="white" variant="h4">
+                    Md Raihanul Hoque
+                </Typography>
+                <Typography sx={{ mb:5, fontStyle:"italic", fontFamily:"sans-serif" }}  color="white" variant="subtitle1">
+                    Web Developer
+                </Typography>
+            </Item>
+            <Stack justifyContent="center" textAlign="center" style={{ display:"block" }}>
+                <MenuItem  underline="none" onClick={() => {alert("I'm a button.");}}>About Me</MenuItem>
+                <MenuItem underline="none" onClick={() => {alert("I'm a button.");}}>Skills</MenuItem>
+                <MenuItem underline="none" onClick={() => {alert("I'm a button.");}}>Project Portfolio</MenuItem>
+                <MenuItem style={{ borderBottom: "2px solid #ffeded" }} underline="none" onClick={() => {alert("I'm a button.");}}>Experience</MenuItem>
+            </Stack>
+            <Stack sx={{ mt:10 }} spacing={.5} justifyContent="center" direction="row" >
+                <Link href="https://fb.com/raihan.sabuj" target="_blank">
+                    <AvatersCustom >
+                        <FacebookIcon />
+                    </AvatersCustom>    
+                </Link>
+                <Link href="https://fb.com/raihan.sabuj" target="_blank">
+                    <Avatar style={ styles.avaterIcons} variant="square" >
+                        <TwitterIcon />
+                    </Avatar>
+                </Link>
+                <Link href="https://fb.com/raihan.sabuj" target="_blank">
+                    <Avatar style={ styles.avaterIcons}  variant="square">
+                        <LinkedInIcon />
+                    </Avatar>
+                </Link>
+                <Link href="https://fb.com/raihan.sabuj" target="_blank">
+                    <Avatar style={ styles.avaterIcons}  variant="rounded">
+                        <GitHubIcon />
+                    </Avatar>
+                </Link>
+                <Link href="https://fb.com/raihan.sabuj" target="_blank">
+                    <Avatar style={ styles.avaterIcons}  variant="square">
+                        <YouTubeIcon />
+                    </Avatar> 
+                </Link>
+            </Stack>
+            <Item sx={{ mt:5 }} justifyContent="center" textAlign="center">
+                <Typography variant="caption" color="white">
+                    Copyright : 2022 @ Raihan Sabuj
+                </Typography>
+            </Item>
+        </Grid>
+        <Grid item xs={9} md={8}>
+            <About />
+        </Grid>
         
-        
-        <About />
         
 
       </Grid>

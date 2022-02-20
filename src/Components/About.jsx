@@ -37,7 +37,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const About = () =>{
     return <>
-        <Grid item xs={9} md={8}>
+        
             <Item sx={{ pt:20, pb:20, p:5, pr:5  }}>
                 <Typography style={styles.sectionHeading} variant="h4">About Me</Typography>
                 <Item style={styles.sectionHeadBtmLine}></Item>
@@ -52,7 +52,6 @@ const About = () =>{
                 This is a Bootstrap v4.2.1 CSS Template for you. Edit and use this layout for your site. Updated on 21 May 2019 for repeated main menu HTML code.
                 </Typography>              
             </Item>
-        </Grid>
-    </>
+     </>
 }
 export default About;

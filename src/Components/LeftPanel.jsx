@@ -135,7 +135,7 @@ const MenuItem = styled(Paper)(({ theme }) => ({
 
 const LeftPanel = () =>{
     return<>
-    <Grid item xs={3} md={4} justifyContent="center" textAlign="center" style={styles.main}>
+    
             <Item justifyContent="center">
                 <Avatar
                     alt="Raihan Sabuj"
@@ -187,7 +187,7 @@ const LeftPanel = () =>{
                     Copyright : 2022 @ Raihan Sabuj
                 </Typography>
             </Item>
-        </Grid>
+        
     </>
 }
 export default LeftPanel;
