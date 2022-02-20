@@ -6,10 +6,11 @@ import Preloader from  './Components/Preloader';
 import Header from  './Components/Header';
 import { useEffect, useState } from 'react';
 import Main from './Components/Main';
- 
+import Home from './Components/Home';
+
 function App() {
     const [showLoader, setShowLoader] = useState(true)
-     
+    const headerPass = "This is a header"
     useEffect(()=>{
         setTimeout(()=>{
           loaderChange(false)
@@ -36,8 +37,9 @@ function App() {
       :
       (
         <>
-          {/* <Header /> */}
-          <Main />
+          {/* <Header headerPass={headerPass} /> */}
+          <Home />
+          {/* <Main /> */}
 
         </>
       )

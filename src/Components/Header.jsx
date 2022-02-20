@@ -3,8 +3,9 @@ import React from "react";
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import HalfCol from './col6';
 
-const Header = () =>{
+const Header = ({headerPass}) =>{
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -40,6 +41,12 @@ const Header = () =>{
         <MenuItem onClick={handleClose}>Logout</MenuItem>
       </Menu>
     </div>
+    <HalfCol >
+      <div className="row" style={{ background:"limegreen" }}>
+        <h1>This is a {headerPass }</h1>
+      </div>
+    </HalfCol>
+    
     </>
 }
 

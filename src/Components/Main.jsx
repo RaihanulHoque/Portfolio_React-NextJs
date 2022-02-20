@@ -22,7 +22,8 @@ import Paper from '@mui/material/Paper';
 
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles({
+
+const useStyles = styled({
   greenBg:  {
     backgroundColor: "limegreen",
   },
@@ -97,10 +98,7 @@ const useStyles = makeStyles({
     color:  "#FFFFFF",
     fontWeight: "bold"
   },
-  
-
-
- });
+});
 
  const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
