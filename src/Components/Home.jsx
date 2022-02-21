@@ -22,6 +22,9 @@ import { borderBottom } from "@mui/system";
 import { StepLabel, Stepper } from "@material-ui/core";
 import About from "./About";
 import LeftPanel from "./LeftPanel";
+import Skills from "./Skills";
+import Project from "./Project";
+import Experience from "./Experience";
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: 'transparent',
@@ -33,10 +36,13 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const styles ={
     wraperContainer:{
-        height: 1356,
-        backgroundImage: `url(${BackGroundImage}) `,
+        // height: "100%",
+        backgroundImage: `url(${BackGroundImage})`,
         backgroundSize: "cover",
         width: "100%",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundColor:"#000",
         
     },
     main:{
@@ -105,7 +111,7 @@ const MenuItem = styled(Paper)(({ theme }) => ({
     height: "70px",
     lineHeight: "70px",
     display: "inline-block",
-    fontSize: "15px",
+    fontSize: "14px",
     fontWeight: "700",
     color: "#fff",
     width: "100%",
@@ -136,19 +142,22 @@ const MenuItem = styled(Paper)(({ theme }) => ({
 
 const Home = () => {
     return (
-    <Grid container style={styles.wraperContainer} sx={{ flexGrow: 1 }} justifyContent="center" >
+    <Grid container 
+    style={styles.wraperContainer} 
+    sx={{ flexGrow: 1 }} justifyContent="center" 
+    >
       <Grid container spacing={2} xs={12} sm={6} md={12} lg={10} justifyContent="center">
-        <Grid item xs={3} md={4} justifyContent="center" textAlign="center" style={styles.main}>
-        <Item justifyContent="center">
+        <Grid item xs={3} md={3} justifyContent="center" textAlign="center" style={styles.main}>
+        <Item justifyContent="center" textAlign="center" position="relative">
                 <Avatar
                     alt="Raihan Sabuj"
                     src={ProfileImage}
                     sx={{ width: 140, height: 140 }}
                 />
-                <Typography sx={{ mt:5 }} color="white" variant="h4">
+                <Typography sx={{ mt:5 }} color="white" variant="h5">
                     Md Raihanul Hoque
                 </Typography>
-                <Typography sx={{ mb:5, fontStyle:"italic", fontFamily:"sans-serif" }}  color="white" variant="subtitle1">
+                <Typography sx={{ mb:5, fontStyle:"italic", fontFamily:"sans-serif" }}  color="white" variant="subtitl2">
                     Web Developer
                 </Typography>
             </Item>
@@ -191,8 +200,11 @@ const Home = () => {
                 </Typography>
             </Item>
         </Grid>
-        <Grid item xs={9} md={8}>
+        <Grid item xs={9} md={9}>
             <About />
+            <Skills />
+            <Project />
+            <Experience />
         </Grid>
         
         
