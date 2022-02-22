@@ -4,8 +4,6 @@ import "../css/style.css";
 import { Container, Grid, Typography, Paper, Divider } from "@mui/material";
 import { styled } from '@mui/material/styles';
 //Components of Mono Stakced Bar
-import MonoStackedBar from "mono-stacked-bar"
-import "mono-stacked-bar/dist/index.css"
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
